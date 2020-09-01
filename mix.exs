@@ -10,8 +10,6 @@ defmodule ExNexmo.Mixfile do
       start_permanent: Mix.env == :prod,
       deps: deps(),
       package: package(),
-      test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: ["coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test],
       description: "Elixir Nexmo API Client"
     ]
   end
@@ -23,16 +21,8 @@ defmodule ExNexmo.Mixfile do
 
   defp deps do
     [
-      {:httpoison, "~> 0.8"},
-      {:poison, "~> 2.0 or ~> 3.0"},
-      {:mix_test_watch, "~> 0.2", only: :dev},
-      {:excoveralls, "~> 0.5", only: :test},
-      {:earmark, "~> 1.0", only: :dev},
-      {:ex_doc, "~> 0.14", only: :dev},
-      {:dialyxir, "~> 0.3", only: :dev},
-      {:credo, "~> 0.3", only: :dev},
-      {:bypass, "~> 0.1", only: :test},
-      {:inch_ex, "~> 0.5", only: :docs}
+      {:httpoison, "~> 1.6"},
+      {:poison, "~> 3.1"}
     ]
   end
 
